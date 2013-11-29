@@ -31,7 +31,7 @@ public class GameStateManager {
 	}
 	
 	public void draw(Graphics2D g){
-		gameStates.get(currentState).draw();
+		gameStates.get(currentState).draw(g);
 	}
 	
 	public void keyPressed(int k) {
