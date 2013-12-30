@@ -12,8 +12,8 @@ import Main.GamePanel;
 public class Background {
        
         private BufferedImage image;
-        private int width; ///////////////
-        private int height; /////////////////
+        private int width; 
+        private int height; 
        
         private double x;
         private double y;
@@ -28,8 +28,8 @@ public class Background {
                         image = ImageIO.read(
                                 getClass().getResourceAsStream(s)
                         );
-                        width = image.getWidth(); ///////////////////
-                        height = image.getHeight(); //////////////////
+                        width = image.getWidth(); 
+                        height = image.getHeight(); 
                         moveScale = ms;
                 }
                 catch(Exception e) {
@@ -39,9 +39,9 @@ public class Background {
         }
        
         public void setPosition(double x, double y) {
-                this.x = (x * moveScale); //////////////////
-                this.y = (y * moveScale); ///////////////////
-                fixPosition(); /////////////////////
+                this.x = (x * moveScale); 
+                this.y = (y * moveScale); 
+                fixPosition(); 
         }
        
         public void setVector(double dx, double dy) {
@@ -52,10 +52,10 @@ public class Background {
         public void update() {
                 x += dx;
                 y += dy;
-                fixPosition(); ///////////////
+                fixPosition();
         }
        
-        ////////////////////
+   
         private void fixPosition() {
                 while(x <= -width) x += width;
                 while(x >= width) x -= width;
